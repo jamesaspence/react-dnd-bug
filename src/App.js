@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import DragDropList from './components/DragDropList';
 
 function App() {
+  const items = [
+    {
+      text: 'Item 1',
+      checked: false,
+      id: '1'
+    },
+    {
+      text: 'Item 2',
+      checked: false,
+      id: '2'
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DragDropList items={items} listId="123456" />
     </div>
   );
 }

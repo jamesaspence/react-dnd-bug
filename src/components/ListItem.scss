@@ -1,0 +1,43 @@
+.ListItem {
+  display: flex;
+  border-bottom: 1px solid #afafaf;
+  margin: 6px 0;
+  justify-content: flex-start;
+  padding: 6px 12px;
+  background-color: #fff;
+
+  .DeleteButton {
+    transition: opacity 200ms ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    border-color: #7f7f7f;
+
+    .DeleteButton {
+      opacity: 1;
+    }
+  }
+
+  .ListItem__checkbox {
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  .ListItem__text {
+    flex: 1;
+    overflow: scroll;
+    margin: 12px 0;
+    line-height: 26px;
+  }
+
+  .ListItem__text--checked {
+    text-decoration: line-through;
+    opacity: 0.75;
+  }
+
+  .ListItem__checkbox {
+    min-width: 72px;
+    margin-right: 0;
+  }
+}
